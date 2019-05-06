@@ -16,3 +16,8 @@ this is for first run only
 ```
 bin/setup-app
 ```
+
+##### finally app is running at
+```
+http://localhost:3000/
+```

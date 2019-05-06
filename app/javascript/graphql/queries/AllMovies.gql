@@ -1,0 +1,12 @@
+query AllMovies {
+  user {
+    id
+  }
+  movies {
+    id
+    title
+    showingStart
+    showingEnd
+    canBook
+  }
+}

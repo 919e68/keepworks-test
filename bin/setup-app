@@ -1,0 +1,9 @@
+#!/bin/sh
+
+docker exec rails-app rails db:migrate
+docker exec rails-app rails db:seed
+docker exec rails-app rake assets:precompile
+docker exec rails-app yarn install
+docker exec rails-app bin/webpack
+
+echo 'App is now configured!'

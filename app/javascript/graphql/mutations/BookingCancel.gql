@@ -1,0 +1,5 @@
+mutation BookingCancel($bookingId: ID!) {
+  bookingCancel(bookingId: $bookingId) {
+    ok
+  }
+}

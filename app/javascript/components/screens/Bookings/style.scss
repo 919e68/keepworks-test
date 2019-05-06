@@ -1,0 +1,35 @@
+@import '~styles/_variables.scss';
+
+.booking-view {
+  background-color: $light;
+  width: 600px;
+  margin: 25px auto;
+  padding: 40px 25px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
+
+  .field {
+    display: flex;
+
+    label {
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    h4 {
+      margin-top: 0px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+
+    .button {
+      width: 50%;
+      font-weight: 600;
+    }
+  }
+}

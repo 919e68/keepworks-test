@@ -1,0 +1,26 @@
+query GetOccupied(
+  $theaterId: ID!,
+  $movieId: ID!,
+  $timeSlotId: ID!,
+  $bookingDate: String!
+) {
+  occupiedSeats(
+    theaterId: $theaterId,
+    movieId: $movieId,
+    timeSlotId: $timeSlotId,
+    bookingDate: $bookingDate
+  )
+  movieBooking(
+    theaterId: $theaterId,
+    movieId: $movieId,
+    timeSlotId: $timeSlotId,
+    bookingDate: $bookingDate
+  ) {
+    id
+    movieId
+    theaterId
+    bookingDate
+    timeSlotId
+    seatNumber
+  }
+}

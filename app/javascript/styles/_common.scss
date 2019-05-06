@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: 'Quicksand';
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  padding: 25px 15px;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+
+  .title {
+    text-align: center;
+  }
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+select {
+  background-color: transparent;
+  border: 1px solid #dadada;
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-family: inherit;
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+}
+
+.button,
+button,
+input[type=button],
+input[type=submit] {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  font-family: inherit;
+  cursor: pointer;
+
+  &.primary {
+    background-color: $primary;
+    color: $light;
+  }
+
+  &.danger {
+    background-color: $red;
+    color: $light;
+  }
+
+  &.gray {
+    background-color: $gray;
+  }
+
+  &.minimum {
+    min-width: 200px;
+  }
+
+  &.block {
+    display: block;
+  }
+
+
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  &.checkbox {
+    flex-direction: row;
+  }
+
+  .field_with_errors {
+    display: flex;
+
+    input,
+    select {
+      width: 100%;
+      border-color: $red;
+    }
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  > input[type=email],
+  > input[type=password],
+  > input[type=text] {
+    display: block;
+    width: 100%;
+  }
+
+  .message {
+    padding: 2px 10px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+    font-size: 13px;
+
+    &.success {
+      background-color: $green;
+      color: #ffffff;
+    }
+
+    &.error {
+      background-color: #e74c3c;
+      color: #ffffff;
+    }
+  }
+}
+
+.react-datepicker {
+  font-family: inherit;
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected {
+    background-color: $primary;
+  }
+}

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker exec rails-app ./bin/webpack-dev-server

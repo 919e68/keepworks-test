@@ -1,0 +1,30 @@
+mutation BookingCreate(
+  $theaterId: ID!,
+  $movieId: ID!,
+  $timeSlotId: ID!,
+  $seatNumber: Int!,
+  $bookingDate: String!,
+  $couponCode: String
+) {
+  bookingCreate(
+    theaterId: $theaterId,
+    movieId: $movieId,
+    timeSlotId: $timeSlotId,
+    seatNumber: $seatNumber,
+    bookingDate: $bookingDate,
+    couponCode: $couponCode
+  ) {
+    ok
+    booking {
+      id
+      theaterId
+      movieId
+      seatNumber
+    }
+    errors {
+      type
+      path
+      message
+    }
+  }
+}

@@ -1,0 +1,24 @@
+query AllBookings {
+  bookings {
+    id
+    bookingDate
+    amount
+    seatNumber
+    movie {
+      id
+      title
+    }
+    theater {
+      id
+      name
+    }
+    timeSlot {
+      id
+      startTime
+    }
+    coupon {
+      id
+      couponCode
+    }
+  }
+}

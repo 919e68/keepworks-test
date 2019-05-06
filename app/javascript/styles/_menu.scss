@@ -1,0 +1,19 @@
+.menu {
+  background-color: $primary;
+  padding: 15px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+    li {
+      a {
+        display: block;
+        padding: 10px 15px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
+}

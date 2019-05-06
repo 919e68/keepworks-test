@@ -1,0 +1,59 @@
+@import '~styles/_variables.scss';
+
+.bookings {
+  background-color: $light;
+  padding: 25px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+    li {
+      width: 100%;
+
+      .booking {
+        display: flex;
+        align-items: center;
+        padding: 10px 10px;
+        border-bottom: 1px solid $gray;
+      }
+
+      .title {
+        flex: 1;
+        padding: 0px 30px;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        a {
+          text-decoration: none;
+          color: $blue;
+        }
+      }
+
+      .theater,
+      .seat-number,
+      .amount,
+      .coupon,
+      .datetime {
+        padding: 0px 30px;
+        font-size: 13px;
+        text-align: center;
+      }
+
+      .seat-number,
+      .coupon {
+        width: 120px;
+      }
+
+      &:last-child {
+        .booking {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

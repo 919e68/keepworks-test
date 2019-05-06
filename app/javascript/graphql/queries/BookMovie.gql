@@ -1,0 +1,23 @@
+query BookMovie($movieId: ID!) {
+  user {
+    id
+    gender
+  }
+  movie(id: $movieId) {
+    id
+    title
+    price
+    showingStart
+    showingEnd
+    theaters {
+      id
+      name
+    }
+  }
+  timeSlots {
+    id
+    name
+    startTime
+    endTime
+  }
+}

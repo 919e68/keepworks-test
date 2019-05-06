@@ -1,0 +1,33 @@
+query GetBooking($bookingId: ID!) {
+  booking(bookingId: $bookingId) {
+    id
+    bookingDate
+    seatNumber
+    amount
+    movie {
+      id
+      title
+      price
+    }
+    theater {
+      id
+      name
+    }
+    timeSlot {
+      id
+      startTime
+    }
+    coupon {
+      id
+      couponCode
+      discountType
+      discount
+    }
+    user {
+      id
+      email
+      fullname
+      gender
+    }
+  }
+}

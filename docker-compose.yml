@@ -1,0 +1,33 @@
+version: '3'
+services:
+  app: &default
+    image: rails-app
+    container_name: rails-app
+    build: .
+    command: 'bin/start'
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3000:3000
+      - 3035:3035
+    depends_on:
+      - db
+    environment:
+      DB_NAME: movie_db
+      DB_USER: root
+      DB_PASS: m0v1ep5ssw0rd
+      DB_HOST: db
+
+  db:
+    image: mysql:5.7
+    container_name: rails-db
+    restart: always
+    volumes:
+      - ./db-data:/var/lib/mysql:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: m0v1ep5ssw0rd
+      MYSQL_DATABASE: movie_db
+      MYSQL_USER: movie_user
+      MYSQL_PASSWORD: m0v1ep5ssw0rd
+    ports:
+      - 3307:3306

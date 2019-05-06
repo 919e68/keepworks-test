@@ -1,0 +1,37 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": "> 1%",
+          "uglify": true
+        },
+        "useBuiltIns": true
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-object-rest-spread",
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "shared": "./app/javascript/components/shared",
+          "screens": "./app/javascript/components/screens",
+          "styles": "./app/javascript/styles",
+          "graphql": "./app/javascript/graphql"
+        }
+      }
+    ]
+  ]
+}
